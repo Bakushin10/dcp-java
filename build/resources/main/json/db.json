@@ -1,0 +1,15 @@
+{
+
+  "data" :[{
+    "ClaimID" : 1,
+    "ProductName" : "claim 1",
+    "ClaimDate" : "11/8/2020",
+    "ClaimStatus" : "active"
+  },
+    {
+      "ClaimID" : 1,
+      "ProductName" : "claim 1",
+      "ClaimDate" : "11/8/2020",
+      "ClaimStatus" : "active"
+    }]
+}

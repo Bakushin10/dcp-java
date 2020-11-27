@@ -1,0 +1,43 @@
+#reset the default port
+server:
+  port: 8083
+
+##### START Spring Config #####
+spring:
+  application:
+    name: ClaimHistory-API
+
+  # DataSource Config
+  # Postgresql settings for local is embedded | see EmbeddedPgDsConfig
+  datasource:
+    # initialization-mode: always
+    # platform: postgresql
+    # schema: classpath:db/schema.sql
+    # data: classpath:db/data.sql
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://dcp-microfe-poc-postgres:5432/postgres
+    username: postgres
+    password: Hello1234
+
+  # spring.datasource.url=jdbc:postgresql://dcp-microfe-poc-postgres:5432/policy_list
+  # spring.datasource.username=postgres
+  # spring.datasource.password=P@ssword123
+  # spring.jpa.show-sql=true
+
+  # spring.datasource.initialization-mode=always
+  # spring.datasource.schema=classpath:/schema.sql
+  # spring.datasource.continue-on-error=true
+
+  # JPA Config
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
